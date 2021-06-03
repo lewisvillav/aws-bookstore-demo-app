@@ -8,7 +8,6 @@
 #     echo 'config check passed!'
 # fi
 
-
 echo $(python3 StaticCommentCheck.py)
 if [ $(python3 StaticCommentCheck.py) = 0 ] 
 then
@@ -18,8 +17,9 @@ else
     echo 'comment check passed!'
 fi
 
-# npm install
-# npm run build
+npm install
+npm run build
+npm run test
 # #cd src/__tests__
 # # jest
 # cd ..
