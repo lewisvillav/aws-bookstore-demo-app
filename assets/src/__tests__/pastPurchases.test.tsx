@@ -12,7 +12,7 @@ test('renders without crashing', () => {
     window.alert = windowAlert;
 });
 
-test('Heading for best sellers component should show text correctly', function () {
+test('Heading for past purchases component should have correct heading', function () {
     render(<PastPurchases />);
     let heading = document.getElementsByClassName("white-box");
     const windowAlert = window.alert;
@@ -20,5 +20,13 @@ test('Heading for best sellers component should show text correctly', function (
     {
         expect(heading[0].getElementsByTagName('h3')[0].innerHTML).toBe("Past purchases");
     }
+    window.alert = windowAlert;
+});
+
+test('Checking end div has correct amount of childNodes', function () {
+    render(<PastPurchases />);
+    let heading = document.getElementsByClassName("well-bs no-margin-top no-padding col-md-12");
+    const windowAlert = window.alert;
+    expect(heading[0].childNodes.length).toEqual(2)
     window.alert = windowAlert;
 });
