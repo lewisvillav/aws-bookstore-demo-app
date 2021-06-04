@@ -16,14 +16,10 @@ else
     echo 'comment check passed!'
 fi
 
-# npm install
-# npm run build
-# npm run test
+npm install
+npm run build
+npm run test
 
-
-# #cd src/__tests__
-# # jest
-# cd ..
 # git add .
 # git commit -m $1
 # git push origin master
